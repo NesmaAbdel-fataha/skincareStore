@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>_HOME_BAGE</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    </head>
+    <body>
+      <!-- header --> 
+      <header class="text-light mb-3" id="header">
+        <h2>Online Shopping</h2>
+              <span id="textUser"></span>
+                
+                
+              <div class="select-menu" >
+                <i class="bi bi-cart-fill" style="font-size: 25px;" id="iconCart"></i>
+                <span id="lengthCart">0</span>
+                <h6 style="margin-left: 10px;font-weight: bold;font-style: normal; display: inline-block;" id="textCart">Cart</h6>
+               <i class="bi bi-caret-down-fill" id="down"></i>
+            
+                <div id="dropdown" >
+                
+                <div id="cartProduct" ></div>
+                <a href="myProduct.html">all product</a>
+                </div>
+                
+                <a href="login3.html">Logout</a>
+            </header>
+    <!-- cards-products -->
+    <div class="container">
+      <div class="searchSection" id="searchSection">
+      
+        <select  id="searchOption" class="searchOption search" onchange="getSearchMood(this.value)">
+          <option value="Search By Name" class="Search By Name"  id="SearchByName" >Search By Name</option>
+          <option value="Search By Category" class="Search By Category" id="SearchByCategory">Search By Category</option>
+        </select>
+        <input type="text" class="searchText search" placeholder="Search By Name" onkeyup="SearchData(this.value)" id="searchText">
+      </div>
+              
+      <div class="row  justify-content-between  container" id="products">
+
+       <!--
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/1.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: Hair Straightener</h6>
+            <h6 class="card-text" id="price">Price:350$</h6>
+            <h6 id="category">category: hair care</h6>
+            <button class="btnAdd mb-3" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+       
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: Vitamin C serum</h6>
+            <h6 class="card-text" id="price">Price:80$</h6>
+            <h6 id="category">category: Skin-care</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n3.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: Cerave cleanser</h6>
+            <h6 class="card-text" id="price">Price:300$</h6>
+            <h6 id="category">category: Skin-care</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+      
+      
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n4.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: Body lotion</h6>
+            <h6 class="card-text" id="price">Price:250$</h6>
+            <h6 id="category">category: Body care</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n5.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: Mascara</h6>
+            <h6 class="card-text" id="price">Price:100$</h6>
+            <h6 id="category">category: Make-up</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n6.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: curling iron curls </h6>
+            <h6 class="card-text" id="price">Price:500$</h6>
+            <h6 id="category">category: hair care</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n7.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: French Manicure</h6>
+            <h6 class="card-text" id="price">Price:60$</h6>
+            <h6 id="category">category: Make-up</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n8.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: Shampoo Dove</h6>
+            <h6 class="card-text" id="price">Price:100$</h6>
+            <h6 id="category">category: hair care</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n9.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: Scarf</h6>
+            <h6 class="card-text" id="price">Price:150$</h6>
+            <h6 id="category">category: clothes</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n10.png" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title:Lenses</h6>
+            <h6 class="card-text" id="price">Price:180$</h6>
+            <h6 id="category">category: makeup</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n11.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: Blow dryer</h6>
+            <h6 class="card-text" id="price">Price:400$</h6>
+            <h6 id="category">category: hair care</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+        <div class="card border border-danger   col-sm-12 col-md-6 col-lg-3 mt-5" style="width: 18rem;">
+          <img src="img/n12.jpg" class="card-img-top" alt="...">
+          <div class="card-body cardContent">
+            <h6 class="card-title" id="title">Title: Foundation</h6>
+            <h6 class="card-text" id="price">Price:200$</h6>
+            <h6 id="category">category: makeup</h6>
+            <button class="btnAdd" id="btnAdd">Add to cart</button>
+            <i class="bi bi-heart-fill" id="icon"></i>
+          </div>
+        </div>
+      
+      -->
+      </div>
+      
+       
+      
+      </div>
+      
+      
+      
+      
+
+
+            <script src="js/home.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+              
+</body>
+</html>

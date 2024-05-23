@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bold{
+    font-weight: bold;
+}
+.bold a{
+    text-decoration: none;
+    font-weight: bold;
+}
+header{
+    /*background-color: var(--bs-pink) !important;*/
+background-color: rgb(196, 48, 97);
+padding: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+header #textUser{
+    font-family: 'Hitalica';
+    font-weight: bold;
+    font-style: italic;
+    flex:1;
+    color: white;
+    font-size: 20px;
+}
+header  h2 {
+    font-family: 'Hitalica';
+    font-weight: bold;
+    font-style: italic;
+    flex: 1;
+    cursor: pointer;
+    
+}
+header a{
+    text-decoration: none;
+ margin: 0 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+.formContainer{
+    background-color: rgb(245, 237, 238);
+}
+label{
+    font-weight: 700;
+}
+.btnAdd{
+    background-color: red;
+    padding: 18px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+   
+.cardContent h6{
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.cardContent .favorite-icon {
+ 
+   cursor: pointer;
+ margin-left: 220px;
+  outline: none;
+  border: none;
+ 
+}
+
+
+
+.searchSection{
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+}
+.search{
+    width: 50%;
+  outline: 0;
+    padding: 8px;
+    border-radius: 5px;
+    
+}
+.searchText{
+    border:gray 1px solid;
+}
+.searchOption{
+    margin-right: 20px;
+}
+.search,select{
+    color: gray;
+    font-weight: bold;
+}
+option{
+    color: black;
+}
+.select-menu{
+    position: relative;
+    z-index: 1;
+   
+}
+#iconCart{
+    position: relative;
+}
+#lengthCart{
+position: absolute;
+bottom: -6px;
+left: 20px;
+font-weight: bold;
+display: none;
+}
+#dropdown{
+   display: none;
+    position: absolute;
+    width: 210px;
+    transform: translate(-40px,0);
+    background-color: pink;
+    top: 80px;
+    padding:10px;
+    border: solid 2px rgb(196, 48, 97);
+}
+
+#down{
+   
+   cursor: pointer;
+   display: inline-block;
+
+}
+
+
+#dropdown a{
+    display: block;   
+    color: white;
+  margin: 4px 0;
+ padding: 0;
+  background-color: rgb(196, 48, 97);
+ text-align: center;
+}
+.linestyle{
+    text-align: center;
+}
+.dash{
+    width: 150px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: orange;
+    display: inline-block;
+    margin-top: 0;
+}
+
+
+.shoppingnow{
+    width: 100%;
+    height: 120px;
+display: flex;
+justify-content: center;
+align-items: center;
+ background-color: pink;
+}
+.shoppingnow a{
+text-decoration: none;
+border: solid 2px black;
+padding: 7px;
+border-radius: 10px;
+color: rgb(196, 48, 97);
+font-weight: bold;
+}
+.shoppingnow a:hover{
+    background-color: rgb(196, 48, 97);
+    color: white;
+    transition: 0.5s;
+}
+
+
